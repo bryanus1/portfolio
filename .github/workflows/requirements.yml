@@ -5,7 +5,7 @@ on:
     branches: [main]
 
 jobs:
-  build:
+  requirements:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout your repository using git
@@ -25,3 +25,9 @@ jobs:
 
       - name: Install dependencies
         run: pnpm install
+
+      - name: Run linting
+        run: pnpm run lint
+
+      - name: Run tests
+        run: echo "No tests to run"
