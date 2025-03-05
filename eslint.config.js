@@ -9,7 +9,7 @@ import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended"
 export default [
   {
     files: ["**/*.{js,mjs,cjs,ts,tsx,astro}"],
-    ignores: ["**/dist/**/*", "*.config.js"],
+    ignores: ["**/dist/**/*", "eslint.config.js"],
   },
   { languageOptions: { globals: globals.browser } },
   pluginJs.configs.recommended,
