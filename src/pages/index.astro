@@ -4,9 +4,13 @@ import Layout from "../layouts/Layout.astro";
 // Components
 import Hero from "@/components/hero.astro";
 import AboutMe from "@/components/about-me.astro";
+
+const title = "Brayan Sanjuan";
+const description = "Brayan Sanjuan's personal website";
+const keywords = ["Brayan Sanjuan", "personal website"];
 ---
 
-<Layout>
+<Layout title={title} description={description} keywords={keywords.join(", ")}>
   <main class="min-h-screen bg-gray-50">
     <Hero />
     <AboutMe />
