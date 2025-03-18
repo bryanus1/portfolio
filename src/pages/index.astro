@@ -4,15 +4,32 @@ import Layout from "../layouts/Layout.astro";
 // Components
 import Hero from "@/components/hero.astro";
 import AboutMe from "@/components/about-me.astro";
+import Experiences from "@/components/experiences.astro";
 
 const title = "Brayan Sanjuan";
 const description = "Brayan Sanjuan's personal website";
 const keywords = ["Brayan Sanjuan", "personal website"];
+
+const experiences = [
+  {
+    title: "Freelance",
+    date: "2024 - Present",
+    location: "Remote",
+    position: "MERN Stack Developer",
+    description: [
+      "Developing custom web applications for international clients",
+      "Building responsive and scalable frontend interfaces with React",
+      "Implementing secure backend systems with Node.js and Express",
+      "Creating RESTful APIs and managing MongoDB databases",
+    ],
+  },
+];
 ---
 
 <Layout title={title} description={description} keywords={keywords.join(", ")}>
   <main class="min-h-screen bg-gray-50">
     <Hero />
     <AboutMe />
+    <Experiences experiences={experiences} />
   </main>
 </Layout>
