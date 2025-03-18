@@ -9,7 +9,7 @@ on:
 
 # Allow this job to clone the repo and create a page deployment
 permissions:
-  contents: write
+  contents: read
   pages: write
   id-token: write
 
@@ -17,10 +17,7 @@ jobs:
   create-version:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/checkout@v2
 
       - name: Get label
         uses: actions-ecosystem/action-release-label@v1
