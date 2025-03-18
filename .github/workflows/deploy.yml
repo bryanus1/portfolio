@@ -36,8 +36,8 @@ jobs:
         uses: bryanus1/auto-version-sync@v1.1.1
         if: ${{ steps.release-label.outputs.level != null }}
         with:
+          git_email: ${{ secrets.EMAIL }}
           git_username: ${{ github.actor }}
-          git_email: ${{ github.actor }}@users.noreply.github.com
           level: ${{ steps.release-label.outputs.level }}
           current_version: ${{ steps.get-latest-tag.outputs.tag }}
 
