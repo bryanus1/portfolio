@@ -14,44 +14,8 @@ permissions:
   id-token: write
 
 jobs:
-  create-version:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-
-      - name: Get label
-        uses: actions-ecosystem/action-release-label@v1
-        id: release-label
-        if: ${{ github.event.pull_request.merged == true }}
-        with:
-          label_prefix: ''
-
-      - name: Get latest tag
-        id: get-latest-tag
-        uses: actions-ecosystem/action-get-latest-tag@v1
-        if: ${{ steps.release-label.outputs.level != null }}
-
-      - name: Update package.json and Push tag
-        id: auto-version-sync
-        uses: bryanus1/auto-version-sync@v1.1.1
-        if: ${{ steps.release-label.outputs.level != null }}
-        with:
-          git_email: ${{ secrets.EMAIL }}
-          git_username: ${{ github.actor }}
-          level: ${{ steps.release-label.outputs.level }}
-          current_version: ${{ steps.get-latest-tag.outputs.tag }}
-
-      - name: Validate version
-        run: |
-          echo "Validating version"
-          if [ -z "${{ steps.auto-version-sync.outputs.new_version }}" ]; then
-            echo "No new version found"
-            exit 1
-          fi
-
   build:
     runs-on: ubuntu-latest
-    needs: create-version
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v4
