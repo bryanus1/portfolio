@@ -59,12 +59,16 @@ const skills: {
   </div>
 
   <div class="container mx-auto px-6 relative z-10">
-    <h2 class="text-4xl font-bold mb-12 text-center">Skills & Expertise</h2>
+    <h2 class="text-4xl font-bold mb-12 text-center fade-in-up">
+      Skills & Expertise
+    </h2>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {
-        skills.map(({ icon, title, subtitle, description }) => (
-          <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group">
+        skills.map(({ icon, title, subtitle, description }, index) => (
+          <div
+            class={`bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group fade-in-up delay-${index + 1}`}
+          >
             <div class="flex items-center mb-4">
               <IconSkill client:load name={icon.name} color={icon.color} />
               <div class="ml-4">
