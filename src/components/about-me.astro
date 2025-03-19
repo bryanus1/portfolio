@@ -61,10 +61,10 @@ const technologies: {
   class="py-20 bg-gradient-to-br from-blue-50 to-indigo-100 transition-colors duration-300 overflow-hidden relative"
 >
   <div class="container mx-auto px-6 relative z-10">
-    <h2 class="text-4xl font-bold mb-8 text-center section-title">About Me</h2>
+    <h2 class="text-4xl font-bold mb-8 text-center fade-in-up">About Me</h2>
 
     <div class="flex flex-col md:flex-row items-center justify-between">
-      <div class="md:w-1/2 mb-8 md:mb-0 about-text">
+      <div class="md:w-1/2 mb-8 md:mb-0 fade-in-up delay-1">
         <p class="text-xl text-gray-700 leading-relaxed mb-6">
           {descriptionParagraph1}
         </p>
@@ -73,7 +73,7 @@ const technologies: {
         </p>
       </div>
 
-      <div class="md:w-1/2 grid grid-cols-2 gap-6 about-skills">
+      <div class="md:w-1/2 grid grid-cols-2 gap-6 fade-in-up delay-2">
         {
           technologies.map(({ title, skills, icon }) => (
             <div class="bg-white p-6 rounded-lg shadow-md">
@@ -87,54 +87,3 @@ const technologies: {
     </div>
   </div>
 </section>
-
-<style>
-  .section-title,
-  .about-text,
-  .about-skills {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-
-  .section-title.visible,
-  .about-text.visible,
-  .about-skills.visible {
-    animation: fadeInUp 0.5s ease-out forwards;
-  }
-
-  .about-text.visible {
-    animation-delay: 0.2s;
-  }
-
-  .about-skills.visible {
-    animation-delay: 0.4s;
-  }
-
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-</style>
-
-<script>
-  function intersectionObserverCallback(entries: IntersectionObserverEntry[]) {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) entry.target.classList.add("visible");
-    });
-  }
-
-  // Intersection Observer for animation
-  const observer = new IntersectionObserver(intersectionObserverCallback, {
-    threshold: 0.1,
-  });
-
-  document
-    .querySelectorAll(".section-title, .about-text, .about-skills")
-    .forEach((el) => observer.observe(el));
-</script>

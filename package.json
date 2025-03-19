@@ -7,10 +7,10 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "format": "prettier --check \"src/**/*.tsx\" \"src/**/*.astro\"",
-    "format:fix": "prettier --write \"src/**/*.tsx\" \"src/**/*.astro\"",
-    "lint": "eslint . --ext .ts,.tsx,.astro",
-    "lint:fix": "eslint . --ext .ts,.tsx,.astro --fix",
+    "format": "prettier --check  \"src/**/*.js\" \"src/**/*.tsx\" \"src/**/*.astro\"",
+    "format:fix": "prettier --write  \"src/**/*.js\" \"src/**/*.tsx\" \"src/**/*.astro\"",
+    "lint": "eslint . --ext .js,.ts,.tsx,.astro",
+    "lint:fix": "eslint . --ext .js,.ts,.tsx,.astro --fix",
     "prepare": "husky"
   },
   "dependencies": {

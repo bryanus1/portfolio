@@ -111,6 +111,7 @@ export default [
         navigator: "readonly",
         localStorage: "readonly",
         fetch: "readonly",
+        IntersectionObserver: "readonly",
       },
     },
   },
