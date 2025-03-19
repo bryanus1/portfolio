@@ -1,0 +1,83 @@
+---
+import type { Icon } from "@/types/icon";
+import { IconSkill } from "@/components/ui/icon-skill";
+
+const skills: {
+  icon: Icon;
+  title: string;
+  subtitle: string;
+  description: string;
+}[] = [
+  {
+    icon: {
+      name: "code",
+      color: "text-blue-500",
+    },
+    title: "Frontend Development",
+    subtitle: "HTML, CSS, JavaScript, React, Tailwind CSS",
+    description:
+      "I have experience building responsive and accessible web applications using modern frontend technologies.",
+  },
+];
+---
+
+<section id="skills" class="py-20 relative overflow-hidden">
+  <!-- Gracdiend Background -->
+  <div
+    class="absolute inset-0 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50"
+  >
+  </div>
+
+  <!-- Skill Illustrations -->
+  <div class="absolute inset-0 opacity-10">
+    <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <pattern
+          id="skill-pattern"
+          x="0"
+          y="0"
+          width="100"
+          height="100"
+          patternUnits="userSpaceOnUse"
+        >
+          <circle
+            cx="50"
+            cy="50"
+            r="20"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"></circle>
+          <path
+            d="M50 30 L50 70 M30 50 L70 50"
+            stroke="currentColor"
+            stroke-width="2"></path>
+        </pattern>
+      </defs>
+      <rect x="0" y="0" width="100%" height="100%" fill="url(#skill-pattern)"
+      ></rect>
+    </svg>
+  </div>
+
+  <div class="container mx-auto px-6 relative z-10">
+    <h2 class="text-4xl font-bold mb-12 text-center">Skills & Expertise</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {
+        skills.map(({ icon, title, subtitle, description }) => (
+          <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group">
+            <div class="flex items-center mb-4">
+              <IconSkill client:load name={icon.name} color={icon.color} />
+              <div class="ml-4">
+                <h3 class="text-lg font-semibold group-hover:text-blue-600 transition-colors duration-300">
+                  {title}
+                </h3>
+                <p class="text-sm text-gray-600">{subtitle}</p>
+              </div>
+            </div>
+            <p class="text-gray-700 text-sm">{description}</p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
