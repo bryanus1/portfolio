@@ -1,23 +1,24 @@
-import type { Icon } from '@/types/icon';
+import type { Icon, IconName } from '@/types/icon';
 import { Code, Server, Database, Zap } from 'lucide-react';
 
-export function IconSkill({name, color, size}: Readonly<Icon>) {
-  if (name === "code") {
-    return <Code size={size ?? 24} className={`w-8 h-8 ${color}`} />;
+function getIcon(name: IconName) {
+  switch (name) {
+    case 'code':
+      return Code;
+    case 'server':
+      return Server;
+    case 'database':
+      return Database;
+    case 'zap':
+      return Zap;
+    default:
+      throw new Error('Unknown skill');
   }
+}
 
-  if (name === "server") {
-    return <Server size={size ?? 24} className={`w-8 h-8 ${color}`} />;
-  }
+export function IconSkill({ name, color, size }: Readonly<Icon>) {
+  const IconComponent = getIcon(name);
 
-  if (name === "database") {
-    return <Database size={size ?? 24} className={`w-8 h-8 ${color}`} />;
-  }
-
-  if (name === "zap") {
-    return <Zap size={size ?? 24} className={`w-8 h-8 ${color}`} />;
-  }
-
-  throw new Error("Unknown skill");
-
+  if (!IconComponent) throw new Error("Unknown skill");
+  return <IconComponent size={size ?? 24} className={`w-8 h-8 ${color}`} />;
 }
