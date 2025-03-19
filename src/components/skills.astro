@@ -1,6 +1,7 @@
 ---
 import type { Icon } from "@/types/icon";
 import { IconSkill } from "@/components/ui/icon-skill";
+import TitleSection from "@/components/ui/title-section.astro";
 
 const skills: {
   icon: Icon;
@@ -59,9 +60,7 @@ const skills: {
   </div>
 
   <div class="container mx-auto px-6 relative z-10">
-    <h2 class="text-4xl font-bold mb-12 text-center fade-in-up">
-      Skills & Expertise
-    </h2>
+    <TitleSection title="Skills & Expertise" />
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {

@@ -5,6 +5,8 @@ import box from "@/assets/box.svg";
 import mapPin from "@/assets/map-pin.svg";
 import calendar from "@/assets/calendar.svg";
 
+import TitleSection from "./ui/title-section.astro";
+
 const experiences = [
   {
     title: "Freelance",
@@ -26,9 +28,8 @@ const experiences = [
   class="py-20 bg-gradient-to-br from-blue-50 to-indigo-100 transition-colors duration-300 overflow-hidden relative"
 >
   <div class="container mx-auto px-6 relative z-10">
-    <h2 class="text-4xl font-bold mb-12 text-center section-title fade-in-up">
-      Professional Experience
-    </h2>
+    <TitleSection title="Professional Experience" />
+
     <div class="space-y-16">
       {
         experiences.map((experience, index) => (

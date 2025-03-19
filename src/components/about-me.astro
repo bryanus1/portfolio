@@ -1,6 +1,7 @@
 ---
 import type { Icon } from "@/types/icon";
 import { IconSkill } from "@/components/ui/icon-skill";
+import TitleSection from "@/components/ui/title-section.astro";
 
 const descriptionParagraph1 = `
 As a passionate MERN Stack Developer, I specialize in building robust
@@ -61,7 +62,7 @@ const technologies: {
   class="py-20 bg-gradient-to-br from-blue-50 to-indigo-100 transition-colors duration-300 overflow-hidden relative"
 >
   <div class="container mx-auto px-6 relative z-10">
-    <h2 class="text-4xl font-bold mb-8 text-center fade-in-up">About Me</h2>
+    <TitleSection title="About Me" />
 
     <div class="flex flex-col md:flex-row items-center justify-between">
       <div class="md:w-1/2 mb-8 md:mb-0 fade-in-up delay-1">
