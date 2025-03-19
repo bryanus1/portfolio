@@ -5,17 +5,20 @@ import box from "@/assets/box.svg";
 import mapPin from "@/assets/map-pin.svg";
 import calendar from "@/assets/calendar.svg";
 
-interface Props {
-  experiences: {
-    title: string;
-    date: string;
-    location: string;
-    position: string;
-    description: string[];
-  }[];
-}
-
-const { experiences } = Astro.props as Props;
+const experiences = [
+  {
+    title: "Freelance",
+    date: "2024 - Present",
+    location: "Remote",
+    position: "MERN Stack Developer",
+    description: [
+      "Developing custom web applications for international clients",
+      "Building responsive and scalable frontend interfaces with React",
+      "Implementing secure backend systems with Node.js and Express",
+      "Creating RESTful APIs and managing MongoDB databases",
+    ],
+  },
+];
 ---
 
 <section
