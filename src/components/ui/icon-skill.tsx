@@ -1,5 +1,5 @@
 import type { Icon, IconName } from '@/types/icon';
-import { Code, Server, Database, Zap } from 'lucide-react';
+import { Code, Server, Database, Zap, Layout, GitBranch, Terminal, Layers, Cpu, Globe, Workflow } from 'lucide-react';
 
 function getIcon(name: IconName) {
   switch (name) {
@@ -11,6 +11,20 @@ function getIcon(name: IconName) {
       return Database;
     case 'zap':
       return Zap;
+    case 'layout':
+      return Layout;
+    case 'git-branch':
+      return GitBranch;
+    case 'terminal':
+      return Terminal;
+    case 'layers':
+      return Layers;
+    case 'cpu':
+      return Cpu;
+    case 'globe':
+      return Globe;
+    case 'workflow':
+      return Workflow;
     default:
       throw new Error('Unknown skill');
   }

@@ -3,7 +3,10 @@ import Layout from "../layouts/Layout.astro";
 
 // Components
 import Hero from "@/components/hero.astro";
+import { Contact } from "@/components/contact";
+import Skills from "@/components/skills.astro";
 import AboutMe from "@/components/about-me.astro";
+import Education from "@/components/education.astro";
 import Experiences from "@/components/experiences.astro";
 
 const title = "Brayan Sanjuan";
@@ -16,5 +19,9 @@ const keywords = ["Brayan Sanjuan", "personal website"];
     <Hero />
     <AboutMe />
     <Experiences />
+    <Skills />
+    <Education />
+
+    <Contact client:visible />
   </main>
 </Layout>

@@ -1,0 +1,72 @@
+---
+import { Image } from "astro:assets";
+
+import award from "@/assets/award.svg";
+import calendar from "@/assets/calendar.svg";
+
+import TitleSection from "./ui/title-section.astro";
+
+const education = [
+  {
+    title: "Bachelor's Degree in Computer Science",
+    institution: "University of California, Los Angeles",
+    period: "2015 - 2019",
+    achievements: [
+      "Graduated with honors",
+      "Dean's List",
+      "Member of the Computer Science Club",
+    ],
+  },
+  {
+    title: "Bachelor's Degree in Computer Science",
+    institution: "University of California, Los Angeles",
+    period: "2015 - 2019",
+    achievements: [
+      "Graduated with honors",
+      "Dean's List",
+      "Member of the Computer Science Club",
+    ],
+  },
+];
+---
+
+<section
+  id="education"
+  class="py-20 bg-gradient-to-br from-indigo-50 to-purple-100 transition-colors duration-300 overflow-hidden relative"
+>
+  <div class="container mx-auto px-6 relative z-10">
+    <TitleSection title="Education" />
+
+    <div class="max-w-3xl mx-auto">
+      {
+        education.map(({ title, institution, period, achievements }, index) => (
+          <div
+            class={`bg-white p-8 rounded-xl shadow-lg mb-10 transition-all duration-300 hover:shadow-2xl relative overflow-hidden fade-in-up delay-${index + 1}`}
+          >
+            <div class="absolute top-0 left-0 w-32 h-32 bg-purple-200 rounded-br-full z-0 opacity-50" />
+
+            <div class="relative z-10">
+              <h3 class="text-2xl font-semibold mb-2 flex items-center">
+                {title}
+              </h3>
+              <h4 class="text-xl text-gray-600 mb-4">{institution}</h4>
+              <h5 class="text-gray-600  mb-4 flex items-center">
+                <Image src={calendar} alt="Date" class="w-4 h-4 mr-2" />
+                {period}
+              </h5>
+              <h5 class="text-gray-600 mb-4 flex items-center">
+                <Image src={award} alt="Date" class="w-4 h-4 mr-2" />
+                Achievements:
+              </h5>
+              <ul class="list-disc list-inside space-y-2 pl-5">
+                {achievements.map((achievement) => (
+                  <li class="text-gray-500 font-light">{achievement}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
