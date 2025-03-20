@@ -7,8 +7,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "format": "prettier --check  \"src/**/*.js\" \"src/**/*.tsx\" \"src/**/*.astro\"",
-    "format:fix": "prettier --write  \"src/**/*.js\" \"src/**/*.tsx\" \"src/**/*.astro\"",
+    "format": "prettier --check \"public/**/*.js\" \"src/**/*.tsx\" \"src/**/*.astro\"",
+    "format:fix": "prettier --write \"public/**/*.js\" \"src/**/*.tsx\" \"src/**/*.astro\"",
     "lint": "eslint . --ext .js,.ts,.tsx,.astro",
     "lint:fix": "eslint . --ext .js,.ts,.tsx,.astro --fix",
     "prepare": "husky"
