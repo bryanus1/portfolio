@@ -69,7 +69,7 @@ const skills: {
             class={`bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group fade-in-up delay-${index + 1}`}
           >
             <div class="flex items-center mb-4">
-              <IconSkill client:load name={icon.name} color={icon.color} />
+              <IconSkill client:visible name={icon.name} color={icon.color} />
               <div class="ml-4">
                 <h3 class="text-lg font-semibold group-hover:text-blue-600 transition-colors duration-300">
                   {title}
