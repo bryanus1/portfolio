@@ -24,10 +24,7 @@ const skills: {
 
 <section id="skills" class="py-20 relative overflow-hidden">
   <!-- Gracdiend Background -->
-  <div
-    class="absolute inset-0 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50"
-  >
-  </div>
+  <div class="absolute inset-0 bg-gradient-to-br from-white to-gray-50"></div>
 
   <!-- Skill Illustrations -->
   <div class="absolute inset-0 opacity-10">
@@ -71,7 +68,7 @@ const skills: {
             <div class="flex items-center mb-4">
               <IconSkill client:visible name={icon.name} color={icon.color} />
               <div class="ml-4">
-                <h3 class="text-lg font-semibold group-hover:text-blue-600 transition-colors duration-300">
+                <h3 class="text-lg font-semibold transition-colors duration-300">
                   {title}
                 </h3>
                 <p class="text-sm text-gray-600">{subtitle}</p>

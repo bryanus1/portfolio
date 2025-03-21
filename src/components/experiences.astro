@@ -25,7 +25,7 @@ const experiences = [
 
 <section
   id="experience"
-  class="py-20 bg-gradient-to-br from-blue-50 to-indigo-100 transition-colors duration-300 overflow-hidden relative"
+  class="py-20 bg-blue-100 bg-opacity-30 transition-colors duration-300 overflow-hidden relative"
 >
   <div class="container mx-auto px-6 relative z-10">
     <TitleSection title="Professional Experience" />
@@ -37,7 +37,7 @@ const experiences = [
             class={`bg-white p-8 rounded-xl shadow-lg transition-all duration-300 hover:shadow-2xl relative overflow-hidden group experience-card fade-in-up delay-${index + 1}`}
           >
             <div
-              class="absolute top-0 right-0 w-32 h-32 bg-blue-200 rounded-bl-full z-0 opacity-50
+              class="absolute top-0 right-0 w-32 h-32 bg-yellow-200 rounded-bl-full z-0 opacity-50
           transition-transform duration-300 group-hover:scale-110"
             />
             <div class="relative z-10">
@@ -53,13 +53,13 @@ const experiences = [
                 {experience.date}
               </p>
               <p class="text-xl font-medium mb-4 flex items-center">
-                <Image src={box} alt="Position" class="w-6 h-6 mr-2" />
+                <Image src={box} alt="Position" class="w-6 h-6 mr-2 " />
                 {experience.position}
               </p>
               <ul class="list-disc space-y-2">
                 {experience.description.map((desc) => (
                   <li class="text-gray-700 flex items-start">
-                    <span class="text-blue-500 mr-2">•</span>
+                    <span class="text-rose-300 mr-2">•</span>
                     {desc}
                   </li>
                 ))}
