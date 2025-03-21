@@ -58,7 +58,7 @@ export function Contact() {
   return (
     <section
       id="contact"
-      className="py-20 bg-gradient-to-br from-blue-50 to-indigo-100 transition-colors duration-300 overflow-hidden relative"
+      className="py-20 bg-gradient-to-br from-white-50 to-gray-50 transition-colors duration-300 overflow-hidden relative"
     >
       <div className="container mx-auto px-6 relative z-10">
         <h2 className="text-4xl font-bold mb-12 text-center section-title fade-in-up">
@@ -74,20 +74,20 @@ export function Contact() {
               <div className="space-y-6">
                 <a
                   href="mailto:bryan.sj175@gmail.com"
-                  className="flex items-center text-gray-600 hover:text-blue-600 transition-colors duration-300"
+                  className="flex items-center text-gray-600 hover:text-blue-400 transition-colors duration-300"
                 >
-                  <Mail className="w-6 h-6 mr-3 text-blue-600" />
+                  <Mail className="w-6 h-6 mr-3 text-blue-400" />
                   bryan.sj175@gmail.com
                 </a>
                 <a
                   href="tel:+573508119060"
-                  className="flex items-center text-gray-600 hover:text-blue-600 transition-colors duration-300"
+                  className="flex items-center text-gray-600 hover:text-blue-400 transition-colors duration-300"
                 >
-                  <Phone className="w-6 h-6 mr-3 text-blue-600" />
+                  <Phone className="w-6 h-6 mr-3 text-blue-400" />
                   +57 350 811 9060
                 </a>
                 <div className="flex items-center text-gray-600">
-                  <MapPin className="w-6 h-6 mr-3 text-blue-600" />
+                  <MapPin className="w-6 h-6 mr-3 text-blue-400" />
                   Bogotá, Colombia
                 </div>
               </div>
@@ -114,7 +114,7 @@ export function Contact() {
                   <input
                     type="text"
                     placeholder="John Doe"
-                    className="w-full px-4 py-2 rounded-md border focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-4 py-2 rounded-md border focus:outline-none focus:ring-2 focus:ring-blue-300"
                   />
                 </div>
                 <div>
@@ -127,7 +127,7 @@ export function Contact() {
                   <input
                     type="email"
                     placeholder="john.doe@example.com"
-                    className="w-full px-4 py-2 rounded-md border  focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-4 py-2 rounded-md border  focus:outline-none focus:ring-2 focus:ring-blue-300"
                   />
                 </div>
               </div>
@@ -142,7 +142,7 @@ export function Contact() {
                 <input
                   type="text"
                   placeholder="Subject"
-                  className="w-full px-4 py-2 rounded-md border focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-4 py-2 rounded-md border focus:outline-none focus:ring-2 focus:ring-blue-300"
                 />
               </div>
 
@@ -156,14 +156,14 @@ export function Contact() {
                 <textarea
                   rows={4}
                   placeholder="Your message here..."
-                  className="w-full px-4 py-2 rounded-md border focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-4 py-2 rounded-md border focus:outline-none focus:ring-2 focus:ring-blue-300"
                 ></textarea>
               </div>
 
               <div className="mt-6">
                 <button
                   type="submit"
-                  className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors duration-300 flex items-center justify-center"
+                  className="w-full bg-rose-400 text-white py-2 px-4 rounded-md hover:bg-rose-500 transition-colors duration-300 flex items-center justify-center"
                 >
                   {loading ? (
                     <Loader2 className="w-5 h-5 animate-spin mr-2" />
