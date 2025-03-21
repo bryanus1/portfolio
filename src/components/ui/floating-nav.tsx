@@ -3,11 +3,11 @@ import { useEffect, useState } from "react"
 
 const sections = [
   { id: "hero", label: "Home" },
-  { id: "about", label: "About" },
-  { id: "experience", label: "Experience" },
-  { id: "skills", label: "Skills" },
+  { id: "about", label: "About Me" },
+  { id: "experience", label: "Professional Experience" },
+  { id: "skills", label: "Skills & Expertise" },
   { id: "education", label: "Education" },
-  { id: "contact", label: "Contact" },
+  { id: "contact", label: "Get in Touch" },
 ]
 
 export function FloatingNav() {
@@ -45,12 +45,12 @@ export function FloatingNav() {
             className="group relative flex items-center"
             aria-label={`Scroll to ${label}`}
           >
-            <span className="absolute right-8 px-2 py-1 rounded bg-gray-900 text-white text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <span className="absolute right-8 px-2 py-1 rounded bg-rose-300 text-white text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               {label}
             </span>
             <div
             className={clsx('w-3 h-3 rounded-full transition-all duration-300', {
-              'bg-blue-600 scale-125': activeSection === id,
+              'bg-yellow-200 scale-125': activeSection === id,
               'bg-gray-400 hover:scale-110': activeSection !== id,
             })} />
           </button>
