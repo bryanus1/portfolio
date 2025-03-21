@@ -4,6 +4,7 @@ import Layout from "../layouts/Layout.astro";
 // Components
 import Hero from "@/components/hero.astro";
 import { Contact } from "@/components/contact";
+import { FloatingNav } from "@/components/ui/floating-nav";
 import Skills from "@/components/skills.astro";
 import AboutMe from "@/components/about-me.astro";
 import Education from "@/components/education.astro";
@@ -16,6 +17,8 @@ const keywords = ["Brayan Sanjuan", "personal website"];
 
 <Layout title={title} description={description} keywords={keywords.join(", ")}>
   <main class="min-h-screen bg-gray-50">
+    <FloatingNav client:load />
+
     <Hero />
     <AboutMe />
     <Experiences />
